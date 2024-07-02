@@ -1,0 +1,6 @@
+@MilkyProject.Web.Api_HostAddress = http://localhost:5263
+
+GET {{MilkyProject.Web.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,50 @@
+﻿@model List<MilkyProject.DtoLayer.DTOs.UIContactDtos.ResultContactDto>
+@{
+    ViewData["Title"] = "MessageList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_NewAdminLayout.cshtml";
+    int count = 0;
+
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white_shd full margin_bottom_30">
+            <div class="full graph_head">
+                <div class="heading1 margin_0">
+                    <h2>Mesaj Listesi</h2>
+                </div>
+            </div>
+            <div class="table_section padding_infor_info">
+                <div class="table-responsive-sm">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ad Soyad</th>
+                                <th>Email</th>
+                                <th>Konu</th>
+                                <th>Mesaj</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <td>@count</td>
+                                    <td><img src="@item.ImageUrl" style="width:65px;height:65px; border-radius:60%" /> @item.NameSurname</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Subject</td>
+                                    <td>@item.Content</td>
+                                    <td><a href="/Admin/AdminContact/DeleteContact/@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

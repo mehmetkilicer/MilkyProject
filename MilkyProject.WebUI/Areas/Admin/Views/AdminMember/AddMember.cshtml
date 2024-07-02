@@ -1,0 +1,34 @@
+﻿@model MilkyProject.DtoLayer.DTOs.UIMemberDtos.AddMemberDto
+@{
+    ViewData["Title"] = "AddMember";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_NewAdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white_shd full margin_bottom_30">
+            <div class="full graph_head">
+                <div class="heading1 margin_0">
+                    <h2>Yeni Çalışan Ekle</h2>
+                </div>
+            </div>
+            <div class="table_section padding_infor_info">
+                <form method="post">
+                    <div class="form-group">
+                        <label class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-control" name="NameSurname" placeholder="Ad Soyad" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Görsel Linki</label>
+                        <input type="text" class="form-control" name="ImageUrl" placeholder="Görsel Linki" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ünvan</label>
+                        <input type="text" class="form-control" name="Title" placeholder="Ünvan" />
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

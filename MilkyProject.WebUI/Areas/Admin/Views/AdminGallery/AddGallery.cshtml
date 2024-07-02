@@ -1,0 +1,26 @@
+﻿@model MilkyProject.DtoLayer.DTOs.UIGalleryDtos.AddGalleryDto
+@{
+    ViewData["Title"] = "AddGallery";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_NewAdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white_shd full margin_bottom_30">
+            <div class="full graph_head">
+                <div class="heading1 margin_0">
+                    <h2>Yeni Resim Ekle</h2>
+                </div>
+            </div>
+            <div class="table_section padding_infor_info">
+                <form method="post">
+                    <div class="form-group">
+                        <label class="form-label">Url</label>
+                        <input type="text" class="form-control" asp-for="ImageUrl" placeholder="Url" />
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
